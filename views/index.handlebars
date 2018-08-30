@@ -1,0 +1,87 @@
+<h1 class="welcome" id="bigtext">WELCOME TO THE PIZZA JUDGEMENT ZONE</h1>
+<h2 class="welcome" id="subtext1">WHERE PIZZA ISN'T JUDGED BY A JURY OF IT'S PEERS</h2>
+<h2 class="welcome" id="subtext2">IT'S JUDGED BY YOU</h2>
+<h2 class="welcome" id="subtext3">BECAUSE YOU'RE EATING IT</h2>
+
+<form class="signUpForm">
+
+    <input id="newUser" type="text" class="validate">
+    <label for="username">Username</label>
+    <input id="newUserPW" type="password" class="validate">
+    <label for="password">Password</label>
+    <button id="newSubBtn">Sign up</button>
+</form>
+
+<form class="signInForm">
+
+    <input id="userName" type="text" class="validate">
+    <label for="username">Username</label>
+    <input id="userPW" type="password" class="validate">
+    <label for="password">Password</label>
+    <button id="subBtn">Sign in</button>
+</form>
+
+<script>
+    $("#newSubBtn").on("click", function (event) {
+        event.preventDefault();
+        const user = $("#newUser").val().trim();
+        const password = $("#newUserPW").val().trim();
+        const newUser = {
+            username: user,
+            password: password
+        }
+        if (!newUser.username || !newUser.password) {
+            return;
+        };
+
+        signUpUser(newUser.username, newUser.password);
+        //   newName.val("");
+        //   newPW.val("");
+
+        function signUpUser(username, password) {
+            $.post("/api/signup", {
+                username: username,
+                password: password
+            }).then(function (data) {
+                window.location.replace(data);
+                // If there's an error, handle it by throwing up a boostrap alert
+            }).catch(handleLoginErr);
+        }
+
+        function handleLoginErr(err) {
+            $("#alert .msg").text(err.responseJSON);
+            $("#alert").fadeIn(500);
+        }
+    });
+
+
+
+    $("#subBtn").on("click", function (events) {
+
+        event.preventDefault();
+        const user = $("#userName").val().trim();
+        const password = $("#userPW").val().trim();
+        const oldUser = {
+            username: user,
+            password: password
+        }
+        if (!oldUser.username || !oldUser.password) {
+            return;
+        };
+
+        logInUser(oldUser.username, oldUser.password);
+
+        function logInUser(username, password) {
+            $.post("/api/login", {
+                username: username,
+                password: password
+            }).then(function (data) {
+                window.location.replace(data);
+                // If there's an error, log the error
+            }).catch(function (err) {
+                console.log(err);
+            });
+        }
+    })
+
+</script>
