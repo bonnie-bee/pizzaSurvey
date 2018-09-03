@@ -5,6 +5,7 @@
 
 <form class="signUpForm">
     <label>Sign Up:</label>
+    <br>
     <input id="newUser" type="text" class="validate">
     <label for="username">Username</label>
     <input id="newUserPW" type="password" class="validate">
@@ -14,6 +15,7 @@
 <br>
 <form class="signInForm">
 <label>Sign in:</label>
+<br>
     <input id="userName" type="text" class="validate">
     <label for="username">Username</label>
     <input id="userPW" type="password" class="validate">
@@ -21,7 +23,7 @@
     <button id="subBtn">Sign in</button>
 </form>
 <br>
-<button class="resultsBtn" href="/results">Best Pizza</button>
+<button class="resultsBtn"><a href="/results">Best Pizza</a></button>
 
 <script>
     $("#newSubBtn").on("click", function (event) {
