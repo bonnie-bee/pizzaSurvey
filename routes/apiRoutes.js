@@ -24,6 +24,7 @@ module.exports = function (app) {
     })
 
   app.post("/api/survey", function (req, res) {
+    console.log(req.session.passport.user.id);
     db.Reviews.create({
       city: req.body.city,
       place: req.body.place,
