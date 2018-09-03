@@ -24,7 +24,7 @@ module.exports = function (app) {
     })
 
   app.post("/api/survey", function (req, res) {
-    console.log(req.session.passport.user.id);
+    let userId = (req.session.passport.user.id);
     db.Reviews.create({
       city: req.body.city,
       place: req.body.place,
@@ -37,7 +37,7 @@ module.exports = function (app) {
       mouthfeel: req.body.mouthfeel,
       taste: req.body.taste,
       total: req.body.total,
-      user_id: req.session.passport.user.id
+      UserId: userId
     })
   })
 };
