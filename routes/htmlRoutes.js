@@ -1,6 +1,6 @@
 var db = require("../models");
-var isAuthenticated = require("../config/middleware/isAuthenticated");
-let sequelize = require("sequelize");
+var isAuthenticated = require("../config/middleWare/isAuthenticated");
+// let sequelize = require("sequelize");
 
 module.exports = function(app) {
 
