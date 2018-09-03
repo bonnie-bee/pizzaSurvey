@@ -4,22 +4,24 @@
 <h2 class="welcome" id="subtext3">BECAUSE YOU'RE EATING IT</h2>
 
 <form class="signUpForm">
-
+    <label>Sign Up:</label>
     <input id="newUser" type="text" class="validate">
     <label for="username">Username</label>
     <input id="newUserPW" type="password" class="validate">
     <label for="password">Password</label>
     <button id="newSubBtn">Sign up</button>
 </form>
-
+<br>
 <form class="signInForm">
-
+<label>Sign in:</label>
     <input id="userName" type="text" class="validate">
     <label for="username">Username</label>
     <input id="userPW" type="password" class="validate">
     <label for="password">Password</label>
     <button id="subBtn">Sign in</button>
 </form>
+<br>
+<button class="resultsBtn" href="/results">Best Pizza</button>
 
 <script>
     $("#newSubBtn").on("click", function (event) {
@@ -83,5 +85,6 @@
             });
         }
     })
+
 
 </script>

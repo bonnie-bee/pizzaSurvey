@@ -1,3 +1,4 @@
+<button class="resultsBtn" href="/results">Best Pizza</button>
 <h1>I'M A SURVEY</h1>
 
 <form>
@@ -87,6 +88,7 @@
   <button type="submit" class="subBtn" id="surveySubBtn">SUBMIT</button>
 </form>
 
+
 <script type="text/javascript">
 
 $("#surveySubBtn").on("click", function(){
@@ -118,17 +120,7 @@ $("#surveySubBtn").on("click", function(){
     taste: taste,
     total: total
   }).then(function(events){
-    alert("Your responses have been recorded")
-    city.val(" ");
-    place.val(" ");
-    appearance.val(5);
-    grease.val(5);
-    cheese.val(5);
-    sauce.val(5);
-    toppings.val(5);
-    crust.val(5);
-    mouthfeel.val(5);
-    taste.val(5);
+    window.location("/results")
   })
 
 })
