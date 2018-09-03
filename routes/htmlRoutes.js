@@ -4,7 +4,7 @@ var isAuthenticated = require("../config/middleWare/isAuthenticated");
 
 module.exports = function(app) {
 
-  app.get("/a", function(req, res) {
+  app.get("/", function(req, res) {
     res.render("index");
   });
   
