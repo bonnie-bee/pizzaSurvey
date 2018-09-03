@@ -7,18 +7,36 @@ module.exports = function (app) {
     //send the user the route so it'll be redirected in the front end (can't post into a GET request from a POST)
     res.json("/survey");
   }),
-  app.post("/api/signup", function (req, res) {
-    console.log(req.body);
-    db.Users.create({
-      username: req.body.username,
-      password: req.body.password
-    })
-      .then(function () {
-        res.redirect(307, "/api/login");
+
+    app.post("/api/signup", function (req, res) {
+      console.log(req.body);
+      db.Users.create({
+        username: req.body.username,
+        password: req.body.password
       })
-      .catch(function (err) {
-        console.log(err);
-        res.json(err);
-      });
+        .then(function () {
+          res.redirect(307, "/api/login");
+        })
+        .catch(function (err) {
+          console.log(err);
+          res.json(err);
+        });
+    })
+
+  app.post("/api/survey", function (req, res) {
+    db.Reviews.create({
+      city: req.body.city,
+      place: req.body.place,
+      appearance: req.body.appearance,
+      grease: req.body.grease,
+      cheese: req.body.cheese,
+      sauce: req.body.sauce,
+      toppings: req.body.toppings,
+      crust: req.body.crust,
+      mouthfeel: req.body.mouthfeel,
+      taste: req.body.taste,
+      total: req.body.total,
+      user_id: req.session.passport.user.id
+    })
   })
 };

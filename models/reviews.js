@@ -33,16 +33,16 @@ module.exports = function(sequelize, DataTypes) {
       grease: {
         type: DataTypes.INTEGER,
         allownull: false
-      },
-      temperature: {
-        type: DataTypes.INTEGER,
-        allownull: false
-      },
-      feel: {
+      }, 
+      mouthfeel: {
         type: DataTypes.INTEGER,
         allownull: false
       },
       taste: {
+        type: DataTypes.INTEGER,
+        allownull: false
+      },
+      total: {
         type: DataTypes.INTEGER,
         allownull: false
       }
