@@ -1,0 +1,82 @@
+.welcome{
+    /* font-family: 'M PLUS Rounded 1c', sans-serif; */
+    font-family: 'Permanent Marker', cursive;
+    /* font-family: 'Rock Salt', cursive; */
+    font-size: 3em
+} 
+
+body{
+    background-image: url("../images/pizza.png");
+    background-repeat: round;
+    /* background-size: contain; */
+
+}
+/* .pizzaDog{
+    position: fixed;
+    display: block;
+    background-image: url("../images/pepperoni.png");
+    background-repeat: space;
+    background-size: contain;
+    min-height: 20%;
+    min-width: 100%;
+
+/*.spinPizza{
+    position: fixed;
+    background-image: url("../images/dog.png");
+    background-repeat: space;
+    background-size: contain;
+    min-height: 20%;
+    min-width: 100%;
+} */
+
+#bG1{
+    
+}
+#bG2{
+    top: 20%;
+}
+#bG3{
+top: 40%;
+}
+#bG4{
+top: 60%
+}
+#bG5{
+    top: 80%
+}
+#frontPageBox{
+    position: absolute;
+    background-color: rgba(400, 400, 400, .9);
+    width: 80%;
+    height: 80%;
+    text-align: center;
+    top: 10%;
+    left: 10%;
+}
+
+.frontBtns{
+    position: relative;
+    width: 25%;
+    height: 30%;
+    margin-top: 5%;
+    font-size: 2em;
+}
+button{
+ border-radius: 10%;
+ background-color: gold;
+ border: sienna thick solid;
+}
+#signUpBtn{
+    right: 5%;
+}
+
+#signInBtn{
+
+}
+
+#resultsBtn{
+    left: 5%;
+}
+
+
+

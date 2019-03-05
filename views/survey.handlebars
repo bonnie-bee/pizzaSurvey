@@ -121,6 +121,7 @@ $("#surveySubBtn").on("click", function(){
     taste: taste,
     total: total
   }).then(function(events){
+    console.log(events);
     window.location("/results")
   })
 

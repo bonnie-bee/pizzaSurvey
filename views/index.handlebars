@@ -1,30 +1,42 @@
-<h1 class="welcome" id="bigtext">WELCOME TO THE PIZZA JUDGEMENT ZONE</h1>
-<h2 class="welcome" id="subtext1">WHERE PIZZA ISN'T JUDGED BY A JURY OF IT'S PEERS</h2>
-<h2 class="welcome" id="subtext2">IT'S JUDGED BY YOU</h2>
-<h2 class="welcome" id="subtext3">BECAUSE YOU'RE EATING IT</h2>
+<div class="pizzaDog" id="bG1"></div>
+<div class="spinPizza" id="bG2"></div>
+<div class="pizzaDog" id="bG3"></div>
+<div class="spinPizza" id="bG4"></div>
+<div class="pizzaDog" id="bG5"></div>
 
-<form class="signUpForm">
-    <label>Sign Up:</label>
-    <br>
-    <input id="newUser" type="text" class="validate">
-    <label for="username">Username</label>
-    <input id="newUserPW" type="password" class="validate">
-    <label for="password">Password</label>
-    <button id="newSubBtn">Sign up</button>
-</form>
-<br>
-<form class="signInForm">
-<label>Sign in:</label>
-<br>
-    <input id="userName" type="text" class="validate">
-    <label for="username">Username</label>
-    <input id="userPW" type="password" class="validate">
-    <label for="password">Password</label>
-    <button id="subBtn">Sign in</button>
-</form>
-<br>
-<button class="resultsBtn"><a href="/results">Best Pizza</a></button>
 
+<div id="frontPageBox">
+    <h1 class="welcome" id="bigtext">You Had Me At Pizza</h1>
+    {{!-- <h2 class="welcome" id="subtext1">WHERE PIZZA ISN'T JUDGED BY A JURY OF IT'S PEERS</h2>
+    <h2 class="welcome" id="subtext2">IT'S JUDGED BY YOU</h2>
+    <h2 class="welcome" id="subtext3">BECAUSE YOU'RE EATING IT</h2> --}}
+    <button class="frontBtns" id="signUpBtn">Sign Up</button>
+    {{!-- <form class="signUpForm">
+        <label>Sign Up:</label>
+        <br>
+        <label for="username">Username</label>
+        <input id="newUser" type="text" class="validate">
+        <label for="password">Password</label>
+        <input id="newUserPW" type="password" class="validate">
+        <button id="newSubBtn">Sign up</button>
+    </form> --}}
+    <button class="frontBtns" id="signInBtn">Sign In</button>
+
+    {{!-- <br> --}}
+    {{!-- <form class="signInForm">
+        <label>Sign in:</label>
+        <br>
+        <label for="username">Username</label>
+        <input id="userName" type="text" class="validate">
+        <label for="password">Password</label>
+        <input id="userPW" type="password" class="validate">
+        <button id="subBtn">Sign in</button>
+    </form> --}}
+    {{!-- <br> --}}
+    <button class="frontBtns" id="resultsBtn">
+        <a href="/results">THE BEST PIZZA</a>
+    </button>
+</div>
 <script>
     $("#newSubBtn").on("click", function (event) {
         event.preventDefault();
