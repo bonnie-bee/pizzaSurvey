@@ -25,3 +25,24 @@ output {
     margin-left: -5px;
     margin-top: -1px;
   }
+
+  #city{
+
+  }
+
+  #pizzaPlace{
+  }
+
+  .question{
+    position: relative;
+    /* width: 90%; */
+    left: 5%;
+  }
+
+  .survey{
+    position: absolute;
+    background-color: aliceblue;
+    left: 10%;
+    width: 80vw;
+    height: 100%;
+  }

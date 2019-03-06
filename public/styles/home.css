@@ -1,34 +1,15 @@
 .welcome{
-    /* font-family: 'M PLUS Rounded 1c', sans-serif; */
-    font-family: 'Permanent Marker', cursive;
-    /* font-family: 'Rock Salt', cursive; */
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    /* font-family: 'Permanent Marker', cursive; */
     font-size: 3em
 } 
 
 body{
-    background-image: url("../images/pizza.png");
-    background-repeat: round;
+   
     /* background-size: contain; */
 
 }
-/* .pizzaDog{
-    position: fixed;
-    display: block;
-    background-image: url("../images/pepperoni.png");
-    background-repeat: space;
-    background-size: contain;
-    min-height: 20%;
-    min-width: 100%;
-
-/*.spinPizza{
-    position: fixed;
-    background-image: url("../images/dog.png");
-    background-repeat: space;
-    background-size: contain;
-    min-height: 20%;
-    min-width: 100%;
-} */
-
+ 
 #bG1{
     
 }

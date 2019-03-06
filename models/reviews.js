@@ -49,8 +49,10 @@ module.exports = function(sequelize, DataTypes) {
     }
   );
 
+  //Associates the review table as belonging to the User table 
   Reviews.associate = function(models) {
     Reviews.belongsTo(models.Users, {
+      //can't save a review without the id of the logged in user
         foreignKey: {
             allowNull: false
           }

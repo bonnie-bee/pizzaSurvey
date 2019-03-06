@@ -16,11 +16,16 @@ module.exports = function(sequelize, DataTypes) {
     }
   );
 
+  //Associates the User table as the owner of the Review table
+  //Basically saying that one user can have multiple reviews
   User.associate = function(models) {
     User.hasMany(models.Reviews, {
+      //if we delete the user then we'll also delete all of the reviews associated with them
       onDelete: "cascade"
     })
   };
+
+  
   User.prototype.validPassword = function(password) {
     return bcrypt.compareSync(password, this.password);
   };

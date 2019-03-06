@@ -1,0 +1,42 @@
+.pizzaDog{
+    position: fixed;
+    /* display: block; */
+    background-image: url("../images/pepperoni.png");
+    background-repeat: space;
+    background-size: contain;
+    min-height: 20%;
+    min-width: 100%;
+ }
+ 
+.spinPizza{
+    position: fixed;
+    background-image: url("../images/dog.png");
+    background-repeat: space;
+    background-size: contain;
+    min-height: 20%; 
+    min-width: 100%;
+}
+
+#bG1{
+    top: 0%;
+    left: 0%;
+}
+
+#bG2{
+
+}
+
+#bG3{
+    /* visibility: hidden; */
+}
+
+#bG4{
+    /* visibility: hidden; */
+    
+}
+
+#bG5{
+    /* visibility: hidden; */
+    
+}
+

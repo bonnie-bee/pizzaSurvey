@@ -37,7 +37,7 @@ module.exports = function (app) {
       mouthfeel: req.body.mouthfeel,
       taste: req.body.taste,
       total: req.body.total,
-      UserId: userId
+      user_id: userId
     })
   })
 };
