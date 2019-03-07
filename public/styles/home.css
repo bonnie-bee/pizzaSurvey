@@ -4,27 +4,7 @@
     font-size: 3em
 } 
 
-body{
-   
-    /* background-size: contain; */
 
-}
- 
-#bG1{
-    
-}
-#bG2{
-    top: 20%;
-}
-#bG3{
-top: 40%;
-}
-#bG4{
-top: 60%
-}
-#bG5{
-    top: 80%
-}
 #frontPageBox{
     position: absolute;
     background-color: rgba(400, 400, 400, .9);
@@ -48,7 +28,11 @@ button{
  border: sienna thick solid;
 }
 #signUpBtn{
-    right: 5%;
+    right: 15%;
+}
+
+.signUpForm{
+    /* display: none; */
 }
 
 #signInBtn{
@@ -58,6 +42,14 @@ button{
 #resultsBtn{
     left: 5%;
 }
+
+
+
+.signInForm{
+    /* display: none; */
+}
+
+
 
 
 
