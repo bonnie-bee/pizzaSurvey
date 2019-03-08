@@ -1,93 +1,112 @@
+<div class="container" id="frontPageBox">
+    {{!-- <div id="frontPageBox"> --}}
+    <h1 class="welcome" id="bigtext">You Had Me At Pizza</h1>
 
-{{!-- 
-<div class="container">
-    {{!-- <div id="frontPageBox">
-        <h1 class="welcome" id="bigtext">You Had Me At Pizza</h1> --}}
+    <div class="row">
 
-        <div class="row">
-            <div class="card text-white bg-warning mb-3 col-3" style="max-width: 18rem;">
-                <div class="card-header" id="signUpBtn">Sign Up</div>
-                <div class="card-body signUpForm">
-                    <form class="signUpForm">
-                        <label for="username">Username</label>
-                        <input id="newUser" type="text" class="validate">
-                        <label for="password">Password</label>
-                        <input id="newUserPW" type="password" class="validate">
-                        <button id="newSubBtn">Submit</button>
-                    </form>
-                </div>
+        <div class="col-sm">
+            <div class="signUp" id="box1A">
+                <h1>Sign Up</h1>
             </div>
-
-            <div class="card text-white bg-warning mb-3 col-3" style="max-width: 18rem;">
-                <div class="card-header" id="signInBtn">Sign In</div>
-                <div class="card-body signInForm">
-                    <form class="signInForm">
-                        <label for="username">Username</label>
-                        <input id="newUser" type="text" class="validate">
-                        <label for="password">Password</label>
-                        <input id="newUserPW" type="password" class="validate">
-                        <button id="newSubBtn">Submit</button>
-                    </form>
-                </div>
+            <div class="signUpBox" id="box1B">
+                <form class="signUpForm">
+                    <label for="username">Username</label>
+                    <input id="newUser" type="text" class="validate">
+                    <label for="password">Password</label>
+                    <input id="newUserPW" type="password" class="validate">
+                    <button id="newUserBtn">Submit</button>
+                </form>
+                <div class="alert alert-warning" id="signUpAlert" role="alert"></div>
             </div>
-
-
-
-            <br>
-
-            <div class="card text-white bg-warning mb-3 col-3" style="max-width: 18rem;">
-                <div class="card-header" id="signInBtn">Results</div>
-                <div class="card-body signInForm">
-                    <h2>Just take me to the best pizza</h2>
-                    <button id="resultsBtn"><a href="/results">P-I-Z-Z-A</a></button>
-                </div>
+        </div>
+        <div class="col-sm">
+            <div class="signIn" id="box2A"></div>
+            <div class="signInBox" id="box2B">
+                <form class="signInForm">
+                    <label for="username">Username</label>
+                    <input id="oldUser" type="text" class="validate">
+                    <label for="password">Password</label>
+                    <input id="oldUserPW" type="password" class="validate">
+                    <button id="oldUserBtn">Submit</button>
+                </form>
             </div>
-        </div> --}}
-    {{!-- </div> --}}
-{{!-- </div> --}}
+        </div>
+        <div class="col-sm">
+            <div class="results" id="box3A">Results</div>
+            <div class="resultsBox" id="box3B">
+                <h2>Just take me to the best pizza</h2>
+                <button id="resultsBtn"><a href="/results">P-I-Z-Z-A</a></button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <script>
 
-    $("#signUpBtn").on("click", function () {
-        const signUpForm = $(".signUpForm");
-        const signUpCss = signUpForm.css("display");
-        console.log(signUpCss);
-        if (signUpCss === "none") {
-            signUpForm.css("display", "contents");
-        } else {
-            signUpForm.css("display", "none");
-        }
+    //open and close the sign up form on click
+    $(".signUp").on("click", function () {
+        const signUpBox = $(".signUpBox");
+        signUpBox.toggle();
 
     })
-    $("#newSubBtn").on("click", function (event) {
+
+    //open and close the sign in form on click
+    $(".signIn").on("click", function () {
+        const signInBox = $(".signInBox");
+        signInBox.toggle();
+
+    })
+
+    //open and close the results box on click
+    $(".results").on("click", function () {
+        const resultsBox = $(".resultsBox");
+        resultsBox.toggle();
+
+    })
+
+    //remove any alerts when the user clicks the input box to start typing again
+    $("input").on("click", function () {
+        console.log("hey");
+        $(".alert").css("display", "none");
+    })
+
+    //create a new user when click the submit button
+    $("#newUserBtn").on("click", function (event) {
         event.preventDefault();
+        //get user info
         const user = $("#newUser").val().trim();
         const password = $("#newUserPW").val().trim();
+        //set user info to new user object
         const newUser = {
             username: user,
             password: password
         }
+        //if left blank, do nothing
         if (!newUser.username || !newUser.password) {
+            $(".alert").text("Enter username and password");
+            $(".alert").css("display", "block");
             return;
         };
-
+        //otherwise run the signUpUser function
         signUpUser(newUser.username, newUser.password);
-        //   newName.val("");
-        //   newPW.val("");
-
-        function signUpUser(username, password) {
-            $.post("/api/signup", {
-                username: username,
-                password: password
-            }).then(function (data) {
-                window.location.replace(data);
-                // If there's an error, handle it by throwing up a boostrap alert
-            }).catch(handleLoginErr);
-        }
-
-        function handleLoginErr(err) {
-            $("#alert .msg").text(err.responseJSON);
-            $("#alert").fadeIn(500);
-        }
     });
 
 
@@ -102,25 +121,57 @@
             password: password
         }
         if (!oldUser.username || !oldUser.password) {
+            $(".alert").text("Enter username and password");
+            $(".alert").css("display", "block");
             return;
         };
 
         logInUser(oldUser.username, oldUser.password);
-
-        function logInUser(username, password) {
-            $.post("/api/login", {
-                username: username,
-                password: password
-            }).then(function (data) {
-                window.location.replace(data);
-                // If there's an error, log the error
-            }).catch(function (err) {
-                console.log(err);
-            });
-        }
     })
 
 
+    //function to sign up a new user
+    function signUpUser(username, password) {
+        //send the username and password to the database throught the api sign up route
+        $.post("/api/signup", {
+            username: username,
+            password: password
+        }).then(function (data) {
+            console.log(data);
+            //if no error, send to survey
+            if (data === "/survey") {
+                window.location.replace(data);
+                //if error, throw error message
+            } else {
+                throw (data.errors[0].message);
+            }
+            //catch the error and run the error code
+        }).catch(handleLoginErr);
+    }
 
+    function logInUser(username, password) {
+        $.post("/api/login", {
+            username: username,
+            password: password
+        }).then(function (data) {
+            //if no error, send to survey
+            if (data === "/survey") {
+                window.location.replace(data);
+                //if error, throw error message
+            } else {
+                throw (data.errors[0].message);
+            }
+            //catch the error and run the error code
+        }).catch(handleLoginErr);
+    }
+
+
+    function handleLoginErr(err) {
+        if (err === "username must be unique") {
+            $(".alert").text("That username has already been chosen. Please pick a different one.");
+            $(".alert").css("display", "block");
+        }
+
+    }
 
 </script>
