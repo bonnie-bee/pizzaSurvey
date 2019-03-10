@@ -1,3 +1,7 @@
+body{
+    background-image: url(../images/pink\ dust.png);
+}
+
 .bGImg{
     position: fixed;
     background-repeat: repeat-x;

@@ -1,9 +1,9 @@
-<div class="container" id="frontPageBox">
-    {{!-- <div id="frontPageBox"> --}}
+<div class="container" id="homePageBox">
+
     <h1 class="welcome" id="bigtext">You Had Me At Pizza</h1>
 
-    <div class="row">
-
+    <div class="row" id="homePageBoxes">
+        {{!-- sign up box/form --}}
         <div class="col-sm">
             <div class="signUp" id="box1A">
                 <h1>Sign Up</h1>
@@ -19,8 +19,9 @@
                 <div class="alert alert-warning" id="signUpAlert" role="alert"></div>
             </div>
         </div>
+        {{!-- sign in box/form --}}
         <div class="col-sm">
-            <div class="signIn" id="box2A"></div>
+            <div class="signIn" id="box2A">Sign In</div>
             <div class="signInBox" id="box2B">
                 <form class="signInForm">
                     <label for="username">Username</label>
@@ -29,8 +30,10 @@
                     <input id="oldUserPW" type="password" class="validate">
                     <button id="oldUserBtn">Submit</button>
                 </form>
+                <div class="alert alert-warning" id="signInAlert" role="alert"></div>
             </div>
         </div>
+        {{!-- results box (to go straight to results page - open to public) --}}
         <div class="col-sm">
             <div class="results" id="box3A">Results</div>
             <div class="resultsBox" id="box3B">
@@ -63,8 +66,15 @@
 
     //open and close the sign up form on click
     $(".signUp").on("click", function () {
+        const signUp = $(".signUp");
         const signUpBox = $(".signUpBox");
+        const signUpBoxDisplay = signUpBox.css("display")
         signUpBox.toggle();
+        if(signUpBoxDisplay === "block"){
+           signUp.css("height", "35vh");
+         } else if(signUpBoxDisplay === "none"){
+           signUp.css("height", "15vh");
+         }
 
     })
 
@@ -94,39 +104,35 @@
         //get user info
         const user = $("#newUser").val().trim();
         const password = $("#newUserPW").val().trim();
-        //set user info to new user object
-        const newUser = {
-            username: user,
-            password: password
-        }
-        //if left blank, do nothing
-        if (!newUser.username || !newUser.password) {
+        //if a parameter left blank, instruct user to enter both fields
+        if (!user || !password) {
             $(".alert").text("Enter username and password");
             $(".alert").css("display", "block");
             return;
-        };
-        //otherwise run the signUpUser function
-        signUpUser(newUser.username, newUser.password);
+        } else {
+            //otherwise run the signUpUser function
+            signUpUser(user, password);
+        }
     });
 
 
-
-    $("#subBtn").on("click", function (events) {
+    //sign in a user after clicking submit on log in
+    $("#oldUserBtn").on("click", function (events) {
 
         event.preventDefault();
-        const user = $("#userName").val().trim();
-        const password = $("#userPW").val().trim();
-        const oldUser = {
-            username: user,
-            password: password
-        }
-        if (!oldUser.username || !oldUser.password) {
+        //grab user's info
+        const user = $("#oldUser").val().trim();
+        const password = $("#oldUserPW").val().trim();
+        //if a field left blank, instruct user to fill it out
+        if (!user || !password) {
             $(".alert").text("Enter username and password");
             $(".alert").css("display", "block");
             return;
-        };
+        } else {
+            //if the form is filled out properly, run the log in function
+            logInUser(user, password);
+        }
 
-        logInUser(oldUser.username, oldUser.password);
     })
 
 
@@ -146,10 +152,13 @@
                 throw (data.errors[0].message);
             }
             //catch the error and run the error code
-        }).catch(handleLoginErr);
+        }).catch(newUserErr);
     }
 
+
+    //function to sign in old user
     function logInUser(username, password) {
+        //send the user info 
         $.post("/api/login", {
             username: username,
             password: password
@@ -159,19 +168,26 @@
                 window.location.replace(data);
                 //if error, throw error message
             } else {
-                throw (data.errors[0].message);
+                console.log(data.errors[0].message);
             }
             //catch the error and run the error code
-        }).catch(handleLoginErr);
+        }).catch(logInErr);
     }
 
 
-    function handleLoginErr(err) {
+    function newUserErr(err) {
         if (err === "username must be unique") {
-            $(".alert").text("That username has already been chosen. Please pick a different one.");
-            $(".alert").css("display", "block");
+            $("#signUpAlert").text("That username has already been chosen. Please pick a different one.");
+        } else {
+            $("#signUpAlert").text(err);            
         }
+        $("#signUpAlert").css("display", "block");
+    }
 
+    function logInErr(err){
+        $("#signInAlert").text("Incorrect username or password");
+        $("#signInAlert").css("display", "block");
+            
     }
 
 </script>

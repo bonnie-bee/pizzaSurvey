@@ -13,77 +13,86 @@
     <input type="text" class="surveyText" id="place">
   </div>
 
-  <div class="form-group question" style="position:relative; margin:auto; width:90%" >
+  <div class="form-group question" style="position:relative; margin:auto; width:90%">
     <label for="formControlRange">How's The Appearance Of The Pizza You're Eating?</label>
     <br>
     <div style="width:80%">
-    <p style="display: inline-block; float: left">Pretty Fucking Bad</p><p style="display: inline-block; float: right">I LOVE IT</p>
+      <p style="display: inline-block; float: left">Pretty Fucking Bad</p>
+      <p style="display: inline-block; float: right">I LOVE IT</p>
     </div>
-    <input type="range" id="appearance" min="0" max="10" style="width:80%">
+    <input type="range" id="appearance" min="-5" max="5" style="width:80%">
   </div>
 
   <div class="form-group question" style="position:relative; margin:auto; width:90%">
     <label for="formControlRange">How Greasy Is That Pizza You're Eating?</label>
     <br>
     <div style="width:80%">
-    <p style="display: inline-block; float: left">Pretty Fucking Greasy</p><p style="display: inline-block; float: right">NO GREASE</p>
+      <p style="display: inline-block; float: left">Pretty Fucking Greasy</p>
+      <p style="display: inline-block; float: right">NO GREASE</p>
     </div>
-    <input type="range" id="grease" min="-10" max="0" style="width:80%">
+    <input type="range" id="grease" min="-5" max="5" style="width:80%">
   </div>
 
   <div class="form-group question" style="position:relative; margin:auto; width:90%">
     <label for="formControlRange">How's The Sauce On That Pizza You're Eating?</label>
-  <br>
+    <br>
     <div style="width:80%">
-    <p style="display: inline-block; float: left">Pretty Fucking Bad</p><p style="display: inline-block; float: right">I LOVE IT</p>
+      <p style="display: inline-block; float: left">Pretty Fucking Bad</p>
+      <p style="display: inline-block; float: right">I LOVE IT</p>
     </div>
-    <input type="range" id="sauce" min="0" max="10" style="width:80%">
+    <input type="range" id="sauce" min="-5" max="5" style="width:80%">
   </div>
 
   <div class="form-group question" style="position:relative; margin:auto; width:90%">
     <label for="formControlRange">How's The Cheese On That Pizza You're Eating?</label>
     <br>
     <div style="width:80%">
-    <p style="display: inline-block; float: left">Pretty Fucking Bad</p><p style="display: inline-block; float: right">I LOVE IT</p>
+      <p style="display: inline-block; float: left">Pretty Fucking Bad</p>
+      <p style="display: inline-block; float: right">I LOVE IT</p>
     </div>
-    <input type="range" id="cheese" min="0" max="10" style="width:80%">
+    <input type="range" id="cheese" min="-5" max="5" style="width:80%">
   </div>
 
   <div class="form-group question" style="position:relative; margin:auto; width:90%">
-    <label for="formControlRange">How Are The Toppings On That Pizza You're Eating (If You're Eating A Classic Cheese Pizza Than Ignore This
+    <label for="formControlRange">How Are The Toppings On That Pizza You're Eating (If You're Eating A Classic Cheese
+      Pizza Than Ignore This
       Question And Keep Doing You)?</label>
     <br>
     <div style="width:80%">
-    <p style="display: inline-block; float: left">Pretty Fucking Bad</p><p style="display: inline-block; float: right">I LOVE IT</p>
+      <p style="display: inline-block; float: left">Pretty Fucking Bad</p>
+      <p style="display: inline-block; float: right">I LOVE IT</p>
     </div>
-    <input type="range" id="toppings" min="0" max="10" style="width:80%">
+    <input type="range" id="toppings" min="-5" max="5" style="width:80%">
   </div>
 
   <div class="form-group question" style="position:relative; margin:auto; width:90%">
     <label for="formControlRange">How's The Quality Of The Crust On That Pizza You're Eating?</label>
     <br>
     <div style="width:80%">
-    <p style="display: inline-block; float: left">Pretty Fucking Bad</p><p style="display: inline-block; float: right">I LOVE IT</p>
+      <p style="display: inline-block; float: left">Pretty Fucking Bad</p>
+      <p style="display: inline-block; float: right">I LOVE IT</p>
     </div>
-    <input type="range" id="crust" min="0" max="10" style="width:80%">
+    <input type="range" id="crust" min="-5" max="5" style="width:80%">
   </div>
 
   <div class="form-group question" style="position:relative; margin:auto; width:90%">
     <label for="formControlRange">How Does This Pizza You're Eating Feel In Your Mouth?</label>
     <br>
     <div style="width:80%">
-    <p style="display: inline-block; float: left">Pretty Fucking Bad</p><p style="display: inline-block; float: right">I LOVE IT</p>
+      <p style="display: inline-block; float: left">Pretty Fucking Bad</p>
+      <p style="display: inline-block; float: right">I LOVE IT</p>
     </div>
-    <input type="range" id="mouthfeel" min="0" max="10" style="width:80%">
+    <input type="range" id="mouthfeel" min="-5" max="5" style="width:80%">
   </div>
 
   <div class="form-group question" style="position:relative; margin:auto; width:90%">
     <label for="formControlRange">Rate The Overall Taste Of The Pizza You're Eating:</label>
     <br>
     <div style="width:80%">
-    <p style="display: inline-block; float: left">Pretty Fucking Bad</p><p style="display: inline-block; float: right">I LOVE IT</p>
+      <p style="display: inline-block; float: left">Pretty Fucking Bad</p>
+      <p style="display: inline-block; float: right">I LOVE IT</p>
     </div>
-    <input type="range" id="taste" min="0" max="10" style="width:80%">
+    <input type="range" id="taste" min="-5" max="5" style="width:80%">
   </div>
 
   <button type="submit" class="subBtn" id="surveySubBtn">SUBMIT</button>
@@ -92,39 +101,51 @@
 
 <script type="text/javascript">
 
-$("#surveySubBtn").on("click", function(){
-  event.preventDefault();
-  let city = $("#city").val().trim();
-  let place = $("#place").val().trim();
-  let appearance = parseInt($("#appearance").val());
-  let grease = parseInt($("#grease").val());
-  let cheese = parseInt($("#cheese").val());
-  let sauce = parseInt($("#sauce").val());
-  let toppings = parseInt($("#toppings").val());
-  let crust = parseInt($("#crust").val());
-  let mouthfeel = parseInt($("#mouthfeel").val());
-  let taste = parseInt($("#taste").val());
-  let total = appearance+grease+cheese+sauce+toppings+crust+mouthfeel+taste
-  console.log("total", total)
-  
-
-  $.post("/api/survey", {
-    city: city,
-    place: place,
-    appearance: appearance,
-    grease: grease,
-    cheese: cheese,
-    sauce: sauce,
-    toppings: toppings,
-    crust: crust,
-    mouthfeel: mouthfeel,
-    taste: taste,
-    total: total
-  }).then(function(events){
-    console.log(events);
-    window.location("/results")
+  $("input").on("input", function () {
+    const rangeVal = this.value;
+    const inputThumb = $(this);
+    inputThumb.attr("value", rangeVal)
+    console.log(rangeVal);
+    console.log(inputThumb.attr("value"));
   })
 
-})
-  
+  $("#surveySubBtn").on("click", function () {
+    event.preventDefault();
+    let city = $("#city").val().trim();
+    let place = $("#place").val().trim();
+    let appearance = parseInt($("#appearance").val());
+    let grease = parseInt($("#grease").val());
+    let cheese = parseInt($("#cheese").val());
+    let sauce = parseInt($("#sauce").val());
+    let toppings = parseInt($("#toppings").val());
+    let crust = parseInt($("#crust").val());
+    let mouthfeel = parseInt($("#mouthfeel").val());
+    let taste = parseInt($("#taste").val());
+    let total = appearance + grease + cheese + sauce + toppings + crust + mouthfeel + taste
+    console.log("total", total)
+
+
+    $.post("/api/survey", {
+      city: city,
+      place: place,
+      appearance: appearance,
+      grease: grease,
+      cheese: cheese,
+      sauce: sauce,
+      toppings: toppings,
+      crust: crust,
+      mouthfeel: mouthfeel,
+      taste: taste,
+      total: total
+    }).then(function (events) {
+      console.log(events);
+      window.location("/results")
+    })
+
+  })
+
+
+  function changeThumb() {
+
+  }
 </script>
