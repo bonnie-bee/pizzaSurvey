@@ -76,40 +76,6 @@
 
 
 
-    {{!-- <div class="row" id="homePageBoxes"> --}}
-    {{!-- sign up box/form --}}
-    {{!-- <div class="col-sm">
-            <div class="signUp" id="box1A">
-                <h1>Sign Up</h1>
-            </div>
-            <div class="signUpBox" id="box1B">
-                
-            </div>
-        </div> --}}
-    {{!-- sign in box/form --}}
-    {{!-- <div class="col-sm">
-            <div class="signIn" id="box2A">Sign In</div>
-            <div class="signInBox" id="box2B">
-                <form class="signInForm">
-                    <label for="username">Username</label>
-                    <input id="oldUser" type="text" class="validate">
-                    <label for="password">Password</label>
-                    <input id="oldUserPW" type="password" class="validate">
-                    <button id="oldUserBtn">Submit</button>
-                </form>
-                <div class="alert alert-warning" id="signInAlert" role="alert"></div>
-            </div>
-        </div> --}}
-    {{!-- results box (to go straight to results page - open to public) --}}
-    {{!-- <div class="col-sm">
-            <div class="results" id="box3A">Results</div>
-            <div class="resultsBox" id="box3B">
-                <h2>Just take me to the best pizza</h2>
-                <button id="resultsBtn"><a href="/results">P-I-Z-Z-A</a></button>
-            </div>
-        </div>
-
-    </div> --}}
 </div>
 
 
@@ -130,37 +96,17 @@
 
 
 <script>
-
-    //open and close the sign up form on click
-    $(".signUp").on("click", function () {
-        const signUp = $(".signUp");
-        const signUpBox = $(".signUpBox");
-        const signUpBoxDisplay = signUpBox.css("display")
-        signUpBox.toggle();
-        if (signUpBoxDisplay === "block") {
-            signUp.css("height", "35vh");
-        } else if (signUpBoxDisplay === "none") {
-            signUp.css("height", "15vh");
-        }
-
+    $("#signUp").on("touchstart", function(event){
+        $("#signUpModal").attr("aria-hidden", "false")
     })
 
-    //open and close the sign in form on click
-    $(".signIn").on("click", function () {
-        const signInBox = $(".signInBox");
-        signInBox.toggle();
-
+    $("#signIn").on("touchstart", function(event){
+        $("#signInModal").attr("aria-hidden", "false")
     })
-
-    //open and close the results box on click
-    $(".results").on("click", function () {
-        const resultsBox = $(".resultsBox");
-        resultsBox.toggle();
-
-    })
+    
 
     //remove any alerts when the user clicks the input box to start typing again
-    $("input").on("click", function () {
+    $("input").on("click", function (event) {
         console.log("hey");
         $(".alert").css("display", "none");
     })
