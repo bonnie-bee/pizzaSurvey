@@ -2,25 +2,25 @@ var db = require("../models");
 var isAuthenticated = require("../config/middleWare/isAuthenticated");
 // let sequelize = require("sequelize");
 
-module.exports = function(app) {
+module.exports = function (app) {
 
-  app.get("/", function(req, res) {
+  app.get("/", function (req, res) {
     res.render("index");
   });
-  
-  app.get("/survey", isAuthenticated, function(req, res){
+
+  app.get("/survey", isAuthenticated, function (req, res) {
     res.render("survey");
   })
 
-  app.get("/results", function(req, res){
+  app.get("/results", function (req, res) {
 
-    db.Reviews.findAll({ limit: 1, order: [ ['total', 'DESC'] ] }).then(function(events){
-      console.log(events[0].dataValues.place)
+    db.Reviews.findAll({ limit: 1, order: [['total', 'DESC']] }).then(function (events) {
+      console.log(events)
       const bestPlace = [
-        {place: events[0].dataValues.place}
-    ]
-    console.log(bestPlace[0].place) 
-    res.render("results", {bP: bestPlace})
+        { place: events[0].dataValues.place }
+      ]
+      console.log(bestPlace[0].place)
+      res.render("results", { bP: bestPlace })
     })
   })
 };
