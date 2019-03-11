@@ -1,5 +1,6 @@
 body{
     background-image: url(../images/pink\ dust.png);
+    overflow: hidden;
 }
 
 .bGImg{

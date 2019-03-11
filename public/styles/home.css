@@ -1,4 +1,24 @@
+@keyframes floatingDog {
+    0%   { left:-20%; top:-10%; transform: rotate(-6deg);}
+    15% { left: 15%; top: 25%; transform: rotate(22deg);}
+    30% { left: 0%; top: -25%;transform: rotate(7deg);}
+    45% { left: -5%; top: 35%; transform: rotate(-11deg);}
+    60% { left: -15%; top: -8%; transform: rotate(-18.5deg);}
+    75% { left: 19%; top: 4%; transform: rotate(-48deg);}
+    90% { left: -8%; top: 20%; transform: rotate(-70deg);}
+    100% { left: -20%; top: -10%; transform: rotate(-5deg);}
+}
 
+@keyframes floatingPizza {
+    0%   { right:-80%; bottom:80%; transform: rotate(-6deg);}
+    15% { right: -45%; bottom: 115%; transform: rotate(-62deg);}
+    30% { right: -60%; bottom: 65%;transform: rotate(-120deg);}
+    45% { right: -65%; bottom: 125%; transform: rotate(-181deg);}
+    60% { right: -75%; bottom: 82%; transform: rotate(-247.5deg);}
+    75%{ right: -41%; bottom: 94%; transform: rotate(-173deg);}
+    90% { right: -68%; bottom: 110%; transform: rotate(-100deg);}
+    100% { right: -80%; bottom: 80%; transform: rotate(-6deg);}
+}
 
 
 #homePageBox{
@@ -11,6 +31,7 @@
     text-align: center;
     top: 0%;
     left: 13%;
+    /* overflow: hidden;   */
 }
 
 .welcome{
@@ -36,7 +57,13 @@
     border: solid black;
     height: 30vh;
     width: 30vw;
-    font-family: 'Major Mono Display', monospace;
+    /* font-family: 'Source Code Pro', monospace; */
+    /* font-family: 'Jura', sans-serif; */
+    /* font-family: 'PT Mono', monospace; */
+    /* font-family: 'Saira Semi Condensed', sans-serif; */
+    /* font-family: 'Nanum Gothic Coding', monospace; */
+    /* font-family: 'Chakra Petch', sans-serif; */
+    font-family: 'Do Hyeon', sans-serif;
     font-size: 5vw;
     background-color: rgba(255, 210, 241, .7);
     border-color: rgb(255, 210, 241);
@@ -74,6 +101,8 @@
     /* border: solid black; */
     height: 70vh;
     width: 30vw;
+    animation: floatingDog 48s linear both infinite;
+    
 }
 
 #glowingPizza{
@@ -84,7 +113,10 @@
     /* border: solid black; */
     height: 70vh;
     width: 30vw;
-    left: 18%;
+    right: -60%;
+    bottom: 90%;
+    animation: floatingPizza 60s alternate linear infinite;
+
 }
 
 
