@@ -3,23 +3,113 @@
 
 #homePageBox{
     position: absolute;
-    background-color: rgba(201,201,201,.5);
-    border-radius: 1%;
+    /* background-color: rgba(201,201,201,.5);
+    border-radius: 1%; */
     /* background-image: url("../images/halftone-yellow.png"); */
     width: 80%;
     height: 80%;
     text-align: center;
-    top: 10%;
+    top: 0%;
     left: 13%;
 }
 
 .welcome{
     position: relative;
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-    /* font-family: 'Permanent Marker', cursive; */
-    font-size: 3em;
-    top: 5%;
+    font-family: 'Major Mono Display', monospace;
+    
+    font-size: 5em;
+    color: rgb(255, 210, 241);
+    
+    text-shadow: 0px 0px 5px rgb(255, 210, 241), 5px 5px rgb(210, 255, 249), 5px 5px 5px rgb(210, 255, 249), 0px 0px 10px rgb(255, 172, 230), 5px 5px 10px rgb(151, 255, 241),  0px 0px 15px rgb(255, 104, 210), 5px 5px 15px rgb(84, 255, 232), 0px 0px 20px rgb(255, 58, 196), 5px 5px 20px rgb(0, 255, 221);
+    top: 0%;
 } 
+
+#homePageTopRow{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    z-index: 2;
+}
+
+.homePageSquares{
+    position: relative;
+    border: solid black;
+    height: 30vh;
+    width: 30vw;
+    font-family: 'Major Mono Display', monospace;
+    font-size: 5vw;
+    background-color: rgba(255, 210, 241, .7);
+    border-color: rgb(255, 210, 241);
+    box-shadow: 0px 0px 5px rgb(255, 210, 241), 5px 5px rgb(210, 255, 249), 5px 5px 5px rgb(210, 255, 249), 0px 0px 10px rgb(255, 172, 230), 5px 5px 10px rgb(151, 255, 241),  0px 0px 15px rgb(255, 104, 210), 5px 5px 15px rgb(84, 255, 232), 0px 0px 20px rgb(255, 58, 196), 5px 5px 20px rgb(0, 255, 221);
+
+}
+
+#signUp{
+    display: table;
+
+
+}
+
+#signUp p{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#signIn{
+    display: table;
+    left: 20%;
+    top: 0%;
+}
+
+#signIn p{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#glowingDog{
+    position: relative;
+    background-image: url("../images/dogBG2.PNG");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    /* border: solid black; */
+    height: 70vh;
+    width: 30vw;
+}
+
+#glowingPizza{
+    position: relative;
+    background-image: url("../images/pizza4.PNG");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    /* border: solid black; */
+    height: 70vh;
+    width: 30vw;
+    left: 18%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #homePageBoxes{
     position: relative;

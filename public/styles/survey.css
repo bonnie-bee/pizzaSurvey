@@ -1,157 +1,151 @@
-output { 
-    position: absolute;
-    background-image: linear-gradient(top, #444444, #999999);
-    width: 40px; 
-    height: 30px; 
-    text-align: center; 
-    color: white; 
-    border-radius: 10px; 
-    display: inline-block; 
-    font: bold 15px/30px Georgia;
-    bottom: 175%;
-    left: 0;
-    margin-left: -1%;
-  }
-  output:after { 
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-top: 10px solid #999999;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    margin-top: -1px;
-  }
+#city{
 
-  #city{
+}
 
-  }
+#pizzaPlace{
+}
 
-  #pizzaPlace{
-  }
+.question{
+  position: relative;
+  /* width: 90%; */ 
+  left: 5%;
+}
 
-  .question{
-    position: relative;
-    /* width: 90%; */ 
-    left: 5%;
-  }
+#surveyBox{
+  position: absolute;
+  background-color: rgba(201,201,201,.7);
+  border-radius: .5%;
+  left: 10%;
+  width: 80vw;
+  height: auto;
+  margin-bottom: 6vh;
+}
 
-  .survey{
-    position: absolute;
-    background-color: aliceblue;
-    left: 10%;
-    width: 80vw;
-    height: 100%;
-  }
+.survey{
+  position: relative;
+  height: 90%;
+}
 
 
-  input[type=range] {
-    height: 58px;
-    -webkit-appearance: none;
-    margin: 10px 0;
-    width: 100%;
-    background-color: rgba(0,0,0,0);
-  }
-  input[type=range]:focus {
-    outline: none;
-  }
-  input[type=range]::-webkit-slider-runnable-track {
-    width: 100%;
-    height: 4px;
-    cursor: pointer;
-    animate: 0.2s;
-    box-shadow: 1px 1px 1px #000000;
-    background: #000000;
-    border-radius: 5px;
-    /* border: 1px solid #000000; */
-  }
+input[type=range] {
+  height: 58px;
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 100%;
+  background-color: rgba(0,0,0,0);
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 1px 1px 1px #000000;
+  background: #000000;
+  border-radius: 5px;
+  /* border: 1px solid #000000; */
+}
 
-  input[type=range]::-webkit-slider-thumb {
-    box-shadow: 0px 0px 0px #000000;
-    height: 40px;
-    width: 40px;
-    border-radius: 50px;
-    background: pink;
-    background-image: url(../images/apathyEmoji.PNG);
-    background-repeat: no-repeat;    
-    cursor: pointer;
-    -webkit-appearance: none;
-    margin-top: -21.5px;
-  }
-  input[type=range]:focus::-webkit-slider-runnable-track {
-    background: #3071A9;
-  }
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px #000000;
+  height: 40px;
+  width: 40px;
+  border-radius: 50px;
+  background: pink;
+  background-image: url(../images/apathyEmoji.PNG);
+  background-repeat: no-repeat;    
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -21.5px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #3071A9;
+}
 
-  input[value="-5"]::-webkit-slider-thumb { background-image: url(../images/sickEmoji.PNG); }
-  input[value="-4"]::-webkit-slider-thumb { background-image: url(../images/sickEmoji.PNG); }
-  input[value="-3"]::-webkit-slider-thumb { background-image: url(../images/sadEmoji.PNG); }
-  input[value="-2"]::-webkit-slider-thumb { background-image: url(../images/sadEmoji.PNG); }
-  input[value="-1"]::-webkit-slider-thumb { background-image: url(../images/apathyEmoji.PNG); }
-  input[value="0"]::-webkit-slider-thumb { background-image: url(../images/apathyEmoji.PNG); }
-  input[value="1"]::-webkit-slider-thumb { background-image: url(../images/apathyEmoji.PNG); }
-  input[value="2"]::-webkit-slider-thumb { background-image: url(../images/mmmEmoji.PNG); }
-  input[value="3"]::-webkit-slider-thumb { background-image: url(../images/mmmEmoji.PNG); }
-  input[value="4"]::-webkit-slider-thumb { background-image: url(../images/heartEmoji.PNG); }
-  input[value="5"]::-webkit-slider-thumb { background-image: url(../images/heartEmoji.PNG); }
+input[value="<-3"]::-webkit-slider-thumb { background-image: url(../images/sickEmoji.PNG); }
+/* input[value="-4"]::-webkit-slider-thumb { background-image: url(../images/sickEmoji.PNG); } */
+/* input[value="-3"]::-webkit-slider-thumb { background-image: url(../images/sadEmoji.PNG); } */
+/* input[value="-2"]::-webkit-slider-thumb { background-image: url(../images/sadEmoji.PNG); } */
+/* input[value="-1"]::-webkit-slider-thumb { background-image: url(../images/apathyEmoji.PNG); } */
+/* input[value="0"]::-webkit-slider-thumb { background-image: url(../images/apathyEmoji.PNG); } */
+/* input[value="1"]::-webkit-slider-thumb { background-image: url(../images/apathyEmoji.PNG); } */
+/* input[value="2"]::-webkit-slider-thumb { background-image: url(../images/mmmEmoji.PNG); } */
+/* input[value="3"]::-webkit-slider-thumb { background-image: url(../images/mmmEmoji.PNG); } */
+input[value=">3"]::-webkit-slider-thumb { background-image: url(../images/heartEmoji.PNG); }
+/* input[value="5"]::-webkit-slider-thumb { background-image: url(../images/heartEmoji.PNG); } */
 
 
-  input[type=range]::-moz-range-track {
-    width: 100%;
-    height: 10px;
-    cursor: pointer;
-    animate: 0.2s;
-    box-shadow: 1px 1px 1px #000000;
-    background: #3071A9;
-    border-radius: 5px;
-    border: 1px solid #000000;
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 1px 1px 1px #000000;
+  background: #3071A9;
+  border-radius: 5px;
+  border: 1px solid #000000;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 0px 0px 0px #000000;
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  background: #FFFFFF;
+  background-image: url(../images/apathyEmoji.PNG);
+  background-repeat: no-repeat; 
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #3071A9;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px #000000;
+}
+input[type=range]::-ms-fill-upper {
+  background: #3071A9;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px #000000;
+}
+input[type=range]::-ms-thumb {
+  margin-top: 1px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  background: #FFFFFF;
+  background-image: url(../images/apathyEmoji.PNG);
+  background-repeat: no-repeat; 
+  cursor: pointer;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #3071A9;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #3071A9;
+}
+
+
+@media screen and (max-width: 575px){
+
+  #surveyBox{
+    left: 8%;
   }
-  input[type=range]::-moz-range-thumb {
-    box-shadow: 0px 0px 0px #000000;
-    height: 50px;
-    width: 50px;
-    border-radius: 50px;
-    background: #FFFFFF;
-    background-image: url(../images/apathyEmoji.PNG);
-    background-repeat: no-repeat; 
-    cursor: pointer;
+}
+
+@media screen and (min-width: 1500px){
+
+  #surveyBox{
+    left: 13%;
   }
-  input[type=range]::-ms-track {
-    width: 100%;
-    height: 10px;
-    cursor: pointer;
-    animate: 0.2s;
-    background: transparent;
-    border-color: transparent;
-    color: transparent;
-  }
-  input[type=range]::-ms-fill-lower {
-    background: #3071A9;
-    border: 1px solid #000000;
-    border-radius: 10px;
-    box-shadow: 1px 1px 1px #000000;
-  }
-  input[type=range]::-ms-fill-upper {
-    background: #3071A9;
-    border: 1px solid #000000;
-    border-radius: 10px;
-    box-shadow: 1px 1px 1px #000000;
-  }
-  input[type=range]::-ms-thumb {
-    margin-top: 1px;
-    height: 50px;
-    width: 50px;
-    border-radius: 50px;
-    background: #FFFFFF;
-    background-image: url(../images/apathyEmoji.PNG);
-    background-repeat: no-repeat; 
-    cursor: pointer;
-  }
-  input[type=range]:focus::-ms-fill-lower {
-    background: #3071A9;
-  }
-  input[type=range]:focus::-ms-fill-upper {
-    background: #3071A9;
-  }
+}

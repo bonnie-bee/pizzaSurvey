@@ -1,10 +1,25 @@
 <div class="container" id="homePageBox">
 
     <h1 class="welcome" id="bigtext">You Had Me At Pizza</h1>
+    <div class="row" id="homePageTopRow">
+        <div class="homePageSquares" id="signUp">
+            <p>
+                Sign<br>Up
+            </p>
+        </div>
+        <div class="homePageSquares" id="signIn">
+            <p>Sign<br>In</p>
+        </div>
+    </div>
+    <div class="row">
+        <div id="glowingDog"></div>
+        <div id="glowingPizza"></div>
+    </div>
 
-    <div class="row" id="homePageBoxes">
-        {{!-- sign up box/form --}}
-        <div class="col-sm">
+
+    {{!-- <div class="row" id="homePageBoxes"> --}}
+    {{!-- sign up box/form --}}
+    {{!-- <div class="col-sm">
             <div class="signUp" id="box1A">
                 <h1>Sign Up</h1>
             </div>
@@ -18,9 +33,9 @@
                 </form>
                 <div class="alert alert-warning" id="signUpAlert" role="alert"></div>
             </div>
-        </div>
-        {{!-- sign in box/form --}}
-        <div class="col-sm">
+        </div> --}}
+    {{!-- sign in box/form --}}
+    {{!-- <div class="col-sm">
             <div class="signIn" id="box2A">Sign In</div>
             <div class="signInBox" id="box2B">
                 <form class="signInForm">
@@ -32,9 +47,9 @@
                 </form>
                 <div class="alert alert-warning" id="signInAlert" role="alert"></div>
             </div>
-        </div>
-        {{!-- results box (to go straight to results page - open to public) --}}
-        <div class="col-sm">
+        </div> --}}
+    {{!-- results box (to go straight to results page - open to public) --}}
+    {{!-- <div class="col-sm">
             <div class="results" id="box3A">Results</div>
             <div class="resultsBox" id="box3B">
                 <h2>Just take me to the best pizza</h2>
@@ -42,7 +57,7 @@
             </div>
         </div>
 
-    </div>
+    </div> --}}
 </div>
 
 
@@ -70,11 +85,11 @@
         const signUpBox = $(".signUpBox");
         const signUpBoxDisplay = signUpBox.css("display")
         signUpBox.toggle();
-        if(signUpBoxDisplay === "block"){
-           signUp.css("height", "35vh");
-         } else if(signUpBoxDisplay === "none"){
-           signUp.css("height", "15vh");
-         }
+        if (signUpBoxDisplay === "block") {
+            signUp.css("height", "35vh");
+        } else if (signUpBoxDisplay === "none") {
+            signUp.css("height", "15vh");
+        }
 
     })
 
@@ -179,15 +194,15 @@
         if (err === "username must be unique") {
             $("#signUpAlert").text("That username has already been chosen. Please pick a different one.");
         } else {
-            $("#signUpAlert").text(err);            
+            $("#signUpAlert").text(err);
         }
         $("#signUpAlert").css("display", "block");
     }
 
-    function logInErr(err){
+    function logInErr(err) {
         $("#signInAlert").text("Incorrect username or password");
         $("#signInAlert").css("display", "block");
-            
+
     }
 
 </script>

@@ -12,13 +12,13 @@ body{
     z-index: -1;
 }
  
-.pizzaDog{
+/* .pizzaDog{
     background-image: url("../images/dogPizza.png");
  }
  
 .spinPizza{
     background-image: url("../images/pizzaDog.png");
-}
+} */
 
 #bG1{
     top: 0%;
