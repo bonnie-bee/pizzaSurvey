@@ -38,6 +38,11 @@ module.exports = function (app) {
       taste: req.body.taste,
       total: req.body.total,
       user_id: userId
+    }).then(function () {
+      res.json("/results")
+    }).catch(function (err) {
+      console.log(err);
+      res.json(err);
     })
   })
 };

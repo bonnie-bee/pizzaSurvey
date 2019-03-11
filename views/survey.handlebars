@@ -1,103 +1,107 @@
-<button class="resultsBtn"><a href="/results">Best Pizza</a></button>
 <div class="container" id="surveyBox">
-  <h1>I'M A SURVEY</h1>
-
+  <h1 id="surveyHeader">The Best Pizza Is Out There</h1>
   <form class="survey">
-    <div class="form-group" id="city">
-      <label for="surveyText">City That You're Eating Pizza In:</label>
-      <input type="text" class="surveyText" id="city">
-    </div>
+    <div class="row surveyTextGroup">
+      <div class="form-group" id="cityText">
+        <label for="surveyText">City:</label>
+        <input type="text" class="surveyTextInput" id="city">
+      </div>
 
-    <div class="form-group" id="pizzaPlace">
-      <label for="surveyText">The Place You Got This Pizza From:</label>
-      <input type="text" class="surveyText" id="place">
+      <div class="form-group" id="pizzaPlaceText">
+        <label for="surveyText">Pizza Place:</label>
+        <input type="text" class="surveyTextInput" id="place">
+      </div>
     </div>
 
     <div class="form-group question" style="position:relative; margin:auto; width:90%">
-      <label for="formControlRange">How's The Appearance Of The Pizza You're Eating?</label>
+      <label for="formControlRange">The Pizza Looks: </label>
       <br>
       <div style="width:80%">
-        <p style="display: inline-block; float: left">Pretty Fucking Bad</p>
-        <p style="display: inline-block; float: right">I LOVE IT</p>
+        <p style="display: inline-block; float: left">TERRIBLE</p>
+        <p style="display: inline-block; float: right">AMAZING</p>
       </div>
       <input type="range" id="appearance" min="-5" max="5" style="width:80%">
     </div>
 
     <div class="form-group question" style="position:relative; margin:auto; width:90%">
-      <label for="formControlRange">How Greasy Is That Pizza You're Eating?</label>
+      <label for="formControlRange">Greasy:</label>
       <br>
       <div style="width:80%">
-        <p style="display: inline-block; float: left">Pretty Fucking Greasy</p>
-        <p style="display: inline-block; float: right">NO GREASE</p>
+        <p style="display: inline-block; float: left">YES</p>
+        <p style="display: inline-block; float: right">NO</p>
       </div>
       <input type="range" id="grease" min="-5" max="5" style="width:80%">
     </div>
 
     <div class="form-group question" style="position:relative; margin:auto; width:90%">
-      <label for="formControlRange">How's The Sauce On That Pizza You're Eating?</label>
+      <label for="formControlRange">The Sauce Tastes:</label>
       <br>
       <div style="width:80%">
-        <p style="display: inline-block; float: left">Pretty Fucking Bad</p>
-        <p style="display: inline-block; float: right">I LOVE IT</p>
+        <p style="display: inline-block; float: left">TERRIBLE</p>
+        <p style="display: inline-block; float: right">AMAZING</p>
       </div>
       <input type="range" id="sauce" min="-5" max="5" style="width:80%">
     </div>
 
     <div class="form-group question" style="position:relative; margin:auto; width:90%">
-      <label for="formControlRange">How's The Cheese On That Pizza You're Eating?</label>
+      <label for="formControlRange">The Cheese Tastes: </label>
       <br>
       <div style="width:80%">
-        <p style="display: inline-block; float: left">Pretty Fucking Bad</p>
-        <p style="display: inline-block; float: right">I LOVE IT</p>
+        <p style="display: inline-block; float: left">TERRIBLE</p>
+        <p style="display: inline-block; float: right">AMAZING</p>
       </div>
       <input type="range" id="cheese" min="-5" max="5" style="width:80%">
     </div>
 
     <div class="form-group question" style="position:relative; margin:auto; width:90%">
-      <label for="formControlRange">How Are The Toppings On That Pizza You're Eating (If You're Eating A Classic Cheese
-        Pizza Than Ignore This
-        Question And Keep Doing You)?</label>
+      <label for="formControlRange">The Toppings Are: </label>
       <br>
       <div style="width:80%">
-        <p style="display: inline-block; float: left">Pretty Fucking Bad</p>
-        <p style="display: inline-block; float: right">I LOVE IT</p>
+        <p style="display: inline-block; float: left">TERRIBLE</p>
+        <p style="display: inline-block; float: right">AMAZING</p>
       </div>
       <input type="range" id="toppings" min="-5" max="5" style="width:80%">
     </div>
 
     <div class="form-group question" style="position:relative; margin:auto; width:90%">
-      <label for="formControlRange">How's The Quality Of The Crust On That Pizza You're Eating?</label>
+      <label for="formControlRange">The Crust Is: </label>
       <br>
       <div style="width:80%">
-        <p style="display: inline-block; float: left">Pretty Fucking Bad</p>
-        <p style="display: inline-block; float: right">I LOVE IT</p>
+        <p style="display: inline-block; float: left">TERRIBLE</p>
+        <p style="display: inline-block; float: right">AMAZING</p>
       </div>
       <input type="range" id="crust" min="-5" max="5" style="width:80%">
     </div>
 
     <div class="form-group question" style="position:relative; margin:auto; width:90%">
-      <label for="formControlRange">How Does This Pizza You're Eating Feel In Your Mouth?</label>
+      <label for="formControlRange">The Mouth Feel Is: </label>
       <br>
       <div style="width:80%">
-        <p style="display: inline-block; float: left">Pretty Fucking Bad</p>
-        <p style="display: inline-block; float: right">I LOVE IT</p>
+        <p style="display: inline-block; float: left">TERRIBLE</p>
+        <p style="display: inline-block; float: right">AMAZING</p>
       </div>
       <input type="range" id="mouthfeel" min="-5" max="5" style="width:80%">
     </div>
 
     <div class="form-group question" style="position:relative; margin:auto; width:90%">
-      <label for="formControlRange">Rate The Overall Taste Of The Pizza You're Eating:</label>
+      <label for="formControlRange">The Overall Experience is: </label>
       <br>
       <div style="width:80%">
-        <p style="display: inline-block; float: left">Pretty Fucking Bad</p>
-        <p style="display: inline-block; float: right">I LOVE IT</p>
+        <p style="display: inline-block; float: left">TERRIBLE</p>
+        <p style="display: inline-block; float: right">AMAZING</p>
       </div>
       <input type="range" id="taste" min="-5" max="5" style="width:80%">
     </div>
 
-    <button type="submit" class="subBtn" id="surveySubBtn">SUBMIT</button>
+    <div class="alert alert-warning" role="alert" id="surveyAlert"></div>
+    <button type="submit" class="btn btn-primary" id="surveySubBtn">SUBMIT</button>
+
   </form>
 </div>
+
+{{!-- <footer id="homeFooter">
+        <p><a href="/results">Take me to your best pizza</a></p>
+    </footer> --}}
 
 
 
@@ -111,27 +115,18 @@
 
 
 <script type="text/javascript">
+  $("input").on("click", function (event) {
+    console.log("hey");
+    $(".alert").css("display", "none");
+  })
 
   $("input").on("input", function () {
     const rangeVal = parseInt(this.value);
     const inputThumb = $(this);
-    /*if(rangeVal<-3){
-    inputThumb.attr("value", "sick")
-    } else if(rangeVal=== -3 || -2){
-    inputThumb.attr("value", "sick")
-    } else if(-2<rangeVal<2){
-    inputThumb.attr("value", "sick")
-    } else if(rangeVal<-3){
-    inputThumb.attr("value", "sick")
-    } else if(rangeVal<-3){
-    inputThumb.attr("value", "sick")
-    }*/
-    inputThumb.attr("value", rangeVal)
-    console.log(rangeVal);
-    console.log(inputThumb.attr("value"));
+    inputThumb.attr("value", rangeVal);
   })
 
-  $("#surveySubBtn").on("click", function () {
+  $("#surveySubBtn").on("click touchend", function () {
     event.preventDefault();
     let city = $("#city").val().trim();
     let place = $("#place").val().trim();
@@ -146,23 +141,42 @@
     let total = appearance + grease + cheese + sauce + toppings + crust + mouthfeel + taste
     console.log("total", total)
 
+    if (!city && !place) {
+      $(".alert").text("Enter City And Name Of Pizza Place");
+      $(".alert").css("display", "block");
+      return;
+    } else if (!city) {
+      $(".alert").text("Enter City");
+      $(".alert").css("display", "block");
+      return;
+    } else if (!place) {
+      $(".alert").text("Enter Name Of Pizza Place");
+      $(".alert").css("display", "block");
+      return;
+    } else {
+      $.post("/api/survey", {
+        city: city,
+        place: place,
+        appearance: appearance,
+        grease: grease,
+        cheese: cheese,
+        sauce: sauce,
+        toppings: toppings,
+        crust: crust,
+        mouthfeel: mouthfeel,
+        taste: taste,
+        total: total
+      }).then(function (events) {
+        if (events === "/results") {
+          window.location.replace(events)
+        } else {
+          console.log(events);
+        }
+      })
+    }
 
-    $.post("/api/survey", {
-      city: city,
-      place: place,
-      appearance: appearance,
-      grease: grease,
-      cheese: cheese,
-      sauce: sauce,
-      toppings: toppings,
-      crust: crust,
-      mouthfeel: mouthfeel,
-      taste: taste,
-      total: total
-    }).then(function (events) {
-      console.log(events);
-      window.location("/results")
-    })
+
+
 
   })
 
