@@ -2,18 +2,77 @@
 
     <h1 class="welcome" id="bigtext">You Had Me At Pizza</h1>
     <div class="row" id="homePageTopRow">
-        <div class="homePageSquares" id="signUp">
-            <p>
-                Sign Up
-            </p>
+        <div data-toggle="modal" data-target="#signUpModal" class="homePageSquares" id="signUp">
+            <p>Sign Up</p>
         </div>
-        <div class="homePageSquares" id="signIn">
+        <div data-toggle="modal" data-target="#signInModal" class="homePageSquares" id="signIn">
             <p>Sign In</p>
         </div>
     </div>
 
+    {{!-- bouncing background images --}}
     <div id="glowingDog"></div>
     <div id="glowingPizza"></div>
+
+
+    <footer id="homeFooter">
+        <p><a href="/results">Take me to your best pizza</a></p>
+    </footer>
+
+
+    <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signUpModalForm">Sign Up</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="signUpForm">
+                        <label for="username">Username</label>
+                        <input id="newUser" type="text" class="validate">
+                        <br>
+                        <label for="password">Password</label>
+                        <input id="newUserPW" type="password" class="validate">
+                    </form>
+                    <div class="alert alert-warning" id="signUpAlert" role="alert"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="newUserBtn">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signInModalForm">Sign In</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="signInForm">
+                        <label for="username">Username</label>
+                        <input id="oldUser" type="text" class="validate">
+                        <label for="password">Password</label>
+                        <input id="oldUserPW" type="password" class="validate">
+                        <button id="oldUserBtn">Submit</button>
+                    </form>
+                    <div class="alert alert-warning" id="signInAlert" role="alert"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="newUserBtn">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
@@ -24,14 +83,7 @@
                 <h1>Sign Up</h1>
             </div>
             <div class="signUpBox" id="box1B">
-                <form class="signUpForm">
-                    <label for="username">Username</label>
-                    <input id="newUser" type="text" class="validate">
-                    <label for="password">Password</label>
-                    <input id="newUserPW" type="password" class="validate">
-                    <button id="newUserBtn">Submit</button>
-                </form>
-                <div class="alert alert-warning" id="signUpAlert" role="alert"></div>
+                
             </div>
         </div> --}}
     {{!-- sign in box/form --}}
