@@ -2,9 +2,11 @@
 
     <h1 class="welcome" id="bigtext">You Had Me At Pizza</h1>
     <div class="row" id="homePageTopRow">
-        <div data-toggle="modal" data-target="#signUpModal" class="homePageSquares" id="signUp">
-            <p>Sign Up</p>
-        </div>
+        <a href="#signUpModal" data-toggle="modal" data-target="#signUpModal">
+            <div class="homePageSquares" id="signUp">
+                <p>Sign Up</p>
+            </div>
+        </a>
         <div data-toggle="modal" data-target="#signInModal" class="homePageSquares" id="signIn">
             <p>Sign In</p>
         </div>
@@ -96,14 +98,14 @@
 
 
 <script>
-    $("#signUp").on("touchstart", function(event){
-        $("#signUpModal").attr("aria-hidden", "false")
-    })
+    //$("#signUp").on("touchstart", function (event) {
+      //  $("#signUpModal").attr("aria-hidden", "false")
+    //})
 
-    $("#signIn").on("touchstart", function(event){
-        $("#signInModal").attr("aria-hidden", "false")
-    })
-    
+    //$("#signIn").on("touchstart", function (event) {
+      //  $("#signInModal").attr("aria-hidden", "false")
+    //})
+
 
     //remove any alerts when the user clicks the input box to start typing again
     $("input").on("click", function (event) {
