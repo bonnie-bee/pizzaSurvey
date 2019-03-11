@@ -7,9 +7,11 @@
                 <p>Sign Up</p>
             </div>
         </a>
+        <a data-toggle="modal" data-target="#signInModal">
         <div data-toggle="modal" data-target="#signInModal" class="homePageSquares" id="signIn">
             <p>Sign In</p>
         </div>
+        </a>
     </div>
 
     {{!-- bouncing background images --}}
@@ -98,14 +100,6 @@
 
 
 <script>
-    //$("#signUp").on("touchstart", function (event) {
-      //  $("#signUpModal").attr("aria-hidden", "false")
-    //})
-
-    //$("#signIn").on("touchstart", function (event) {
-      //  $("#signInModal").attr("aria-hidden", "false")
-    //})
-
 
     //remove any alerts when the user clicks the input box to start typing again
     $("input").on("click", function (event) {
