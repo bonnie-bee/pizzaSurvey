@@ -37,7 +37,10 @@ module.exports = function (app) {
       mouthfeel: req.body.mouthfeel,
       taste: req.body.taste,
       total: req.body.total,
-      user_id: userId
+      //local sql database spelling
+      //user_id: userId
+      //heroku database spelling
+      UserId: userId
     }).then(function () {
       res.json("/results")
     }).catch(function (err) {
