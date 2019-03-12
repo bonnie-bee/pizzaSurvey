@@ -1,6 +1,6 @@
 ## Pizza Survey 
 
-*Some friends and I are embarking on a pizza quest to find the best pizza in our town. This neo-80s themed survey app will collect our data and print out the highest rated pizza.*
+*Some friends and I are embarking on a Pizza Quest to find the best pizza in our town. This neo-80s themed survey app will collect our data and print out the highest rated pizza.*
 
 ### Future updates:
 ___
