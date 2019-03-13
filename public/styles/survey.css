@@ -10,7 +10,7 @@
   overflow-y: scroll;
   overflow-x: hidden; 
   font-family: 'Titillium Web', sans-serif;
-
+  z-index: 2;
 }
 
 #surveyBox::-webkit-scrollbar {
@@ -242,10 +242,70 @@ input[type=range]:focus::-ms-fill-upper {
 
 
 
+
+@keyframes floatingDogSm {
+  0%   { left:-120%; top:-10%; transform: rotate(-6deg);}
+  15%  { left: 50%; top: 105%; transform: rotate(225deg);}
+  30%  { left: 110%; top: -45%;transform: rotate(-78deg);}
+  45%  { left: -15%; top: -45%; transform: rotate(-111deg);}
+  60%  { left: 115%; top: 18%; transform: rotate(18.5deg);}
+  75%  { left: 19%; top: 114%; transform: rotate(-300deg);}
+  90%  { left: -18%; top: 20%; transform: rotate(70deg);}
+  100% { left: -20%; top: -110%; transform: rotate(255deg);}
+}
+
+@keyframes floatingPizzaSm {
+  0%   { left:-10%; top:80%; transform: rotate(-6deg);}
+  15%  { left: 45%; top: -45%; transform: rotate(-62deg);}
+  30%  { left: 105%; top: 165%;transform: rotate(120deg);}
+  45%  { left: -65%; top: -25%; transform: rotate(-181deg);}
+  60%  { left: -75%; top: 182%; transform: rotate(247.5deg);}
+  75%  { left: 141%; top: -104%; transform: rotate(-173deg);}
+  90%  { left: -68%; top: 110%; transform: rotate(-300deg);}
+  100% { left: 80%; top: -180%; transform: rotate(6deg);}
+}
+
+#glowingDogSm{
+  position: absolute;
+    background-image: url("../images/dogBG2.PNG");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    /* border: solid black; */
+    height: 35vh;
+    width: 15vw;
+    animation: floatingDogSm2 60s linear infinite;
+
+}
+
+#glowingPizzaSm{
+  position: absolute;
+    background-image: url("../images/pizza4.PNG");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    /* border: solid black; */
+    height: 35vh;
+    width: 15vw;
+    animation: floatingPizzaSm2 60s alternate linear infinite;
+}
+
+
+
+
+
 @media screen and (max-width: 575px){
 
   #surveyBox{
     left: 8%;
+  }
+
+  #glowingDogSm{
+    height: 70vh;
+    width: 30vw;  
+  }
+  
+  #glowingPizzaSm{
+    height: 70vh;
+    width: 30vw;  
   }
 }
 

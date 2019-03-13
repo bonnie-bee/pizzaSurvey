@@ -10,21 +10,69 @@
     overflow: hidden; 
     font-family: 'Titillium Web', sans-serif;
     text-align: center;
+    z-index: 2;
  }
  
  .pizzaResults h1{
      position: relative;
      top: 10vh;
      font-family: 'Major Mono Display', monospace;
-    font-size: 4em;
+    font-size: 8vh;
     color: rgb(255, 210, 241);
     text-shadow: 0px 0px 5px rgb(255, 210, 241), 5px 5px rgb(210, 255, 249), 5px 5px 5px rgb(210, 255, 249), 0px 0px 10px rgb(255, 172, 230), 5px 5px 10px rgb(151, 255, 241),  0px 0px 15px rgb(255, 104, 210), 5px 5px 15px rgb(84, 255, 232), 0px 0px 20px rgb(255, 58, 196), 5px 5px 20px rgb(0, 255, 221);
  }
 
  #theBest{
      margin-top: 5vh;
-     font-size: 8em;
+     font-size: 13vh;
  }
+
+ @keyframes floatingDogSm {
+    0%   { left:-10%; top:80%; transform: rotate(-6deg);}
+    15%  { left: 45%; top: -45%; transform: rotate(-62deg);}
+    30%  { left: 105%; top: 165%;transform: rotate(120deg);}
+    45%  { left: -65%; top: -25%; transform: rotate(-181deg);}
+    60%  { left: -75%; top: 182%; transform: rotate(247.5deg);}
+    75%  { left: 141%; top: -104%; transform: rotate(-173deg);}
+    90%  { left: -68%; top: 110%; transform: rotate(-300deg);}
+    100% { left: 80%; top: -180%; transform: rotate(6deg);}
+  }
+  
+  @keyframes floatingPizzaSm {
+    0%   { left:-120%; top:-10%; transform: rotate(-6deg);}
+    15%  { left: 50%; top: 105%; transform: rotate(225deg);}
+    30%  { left: 110%; top: -45%;transform: rotate(-78deg);}
+    45%  { left: -15%; top: -45%; transform: rotate(-111deg);}
+    60%  { left: 115%; top: 18%; transform: rotate(18.5deg);}
+    75%  { left: 19%; top: 114%; transform: rotate(-300deg);}
+    90%  { left: -18%; top: 20%; transform: rotate(70deg);}
+    100% { left: -20%; top: -110%; transform: rotate(255deg);}
+  }
+
+  #glowingDogSm2{
+    position: absolute;
+      background-image: url("../images/dogBG2.PNG");
+      background-size: 100%;
+      background-repeat: no-repeat;
+      /* border: solid black; */
+      height: 35vh;
+      width: 15vw;
+      animation: floatingDogSm 60s linear infinite;
+  
+  }
+  
+  #glowingPizzaSm2{
+    position: absolute;
+      background-image: url("../images/pizza4.PNG");
+      background-size: 100%;
+      background-repeat: no-repeat;
+      /* border: solid black; */
+      height: 35vh;
+      width: 15vw;
+      animation: floatingPizzaSm 60s alternate linear infinite;
+  }
+
+
 
 
  @media screen and (max-width: 575px){
@@ -39,5 +87,15 @@
         margin-top: 10vh;
         font-size: 9vw;
     }
+
+    #glowingDogSm{
+        height: 70vh;
+        width: 30vw;  
+      }
+      
+      #glowingPizzaSm{
+        height: 70vh;
+        width: 30vw;  
+      }
 
  }
