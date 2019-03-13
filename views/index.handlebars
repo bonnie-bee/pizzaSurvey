@@ -8,15 +8,15 @@
             </div>
         </a>
         <a href="signInModal" class="iphoneStruggle" data-toggle="modal" data-target="#signInModal">
-        <div class="homePageSquares" id="signIn">
-            <p>Sign In</p>
-        </div>
+            <div class="homePageSquares" id="signIn">
+                <p>Sign In</p>
+            </div>
         </a>
     </div>
 
     {{!-- bouncing background images --}}
     <div id="glowingDog"></div>
-    <div id="glowingPizza"></div> 
+    <div id="glowingPizza"></div>
 
 
     <footer id="homeFooter">
@@ -40,7 +40,10 @@
                         <input id="newUser" type="text" class="validate">
                         <br>
                         <label for="password">Password</label>
-                        <input id="newUserPW" type="password" class="validate">
+                        <input id="newUserPW1" type="password" class="validate">
+                        <br>
+                        <label for="password">Retype Password</label>
+                        <input id="newUserPW2" type="password" class="validate">
                     </form>
                     <div class="alert alert-warning" id="signUpAlert" role="alert"></div>
                 </div>
@@ -112,15 +115,20 @@
         event.preventDefault();
         //get user info
         const user = $("#newUser").val().trim();
-        const password = $("#newUserPW").val().trim();
+        const password1 = $("#newUserPW1").val().trim();
+        const password2 = $("#newUserPW2").val().trim();
         //if a parameter left blank, instruct user to enter both fields
-        if (!user || !password) {
+        if (!user || !password1 || !password2) {
             $(".alert").text("Enter username and password");
+            $(".alert").css("display", "block");
+            return;
+        } else if (password1 !== password2) {
+            $(".alert").text("Passwords do not match");
             $(".alert").css("display", "block");
             return;
         } else {
             //otherwise run the signUpUser function
-            signUpUser(user, password);
+            signUpUser(user, password1);
         }
     });
 
