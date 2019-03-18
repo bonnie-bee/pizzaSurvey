@@ -27,7 +27,7 @@
      font-size: 13vh;
  }
 
- @keyframes floatingDogSm {
+ @keyframes floatingDogSm2 {
     0%   { left:-10%; top:80%; transform: rotate(-6deg);}
     15%  { left: 45%; top: -45%; transform: rotate(-62deg);}
     30%  { left: 105%; top: 165%;transform: rotate(120deg);}
@@ -38,7 +38,7 @@
     100% { left: 80%; top: -180%; transform: rotate(6deg);}
   }
   
-  @keyframes floatingPizzaSm {
+  @keyframes floatingPizzaSm2 {
     0%   { left:-120%; top:-10%; transform: rotate(-6deg);}
     15%  { left: 50%; top: 105%; transform: rotate(225deg);}
     30%  { left: 110%; top: -45%;transform: rotate(-78deg);}
@@ -57,7 +57,7 @@
       /* border: solid black; */
       height: 35vh;
       width: 15vw;
-      animation: floatingDogSm 60s linear infinite;
+      animation: floatingDogSm2 60s linear infinite;
   
   }
   
@@ -69,7 +69,7 @@
       /* border: solid black; */
       height: 35vh;
       width: 15vw;
-      animation: floatingPizzaSm 60s alternate linear infinite;
+      animation: floatingPizzaSm2 60s alternate linear infinite;
   }
 
 

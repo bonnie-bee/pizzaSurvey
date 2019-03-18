@@ -38,9 +38,9 @@ module.exports = function (app) {
       taste: req.body.taste,
       total: req.body.total,
       //local sql database spelling
-      //user_id: userId
+      user_id: userId
       //heroku database spelling
-      UserId: userId
+      // UserId: userId
     }).then(function () {
       res.json("/results")
     }).catch(function (err) {

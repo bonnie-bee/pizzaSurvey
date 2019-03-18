@@ -273,7 +273,7 @@ input[type=range]:focus::-ms-fill-upper {
     /* border: solid black; */
     height: 35vh;
     width: 15vw;
-    animation: floatingDogSm2 60s linear infinite;
+    animation: floatingDogSm 60s linear infinite;
 
 }
 
@@ -285,7 +285,7 @@ input[type=range]:focus::-ms-fill-upper {
     /* border: solid black; */
     height: 35vh;
     width: 15vw;
-    animation: floatingPizzaSm2 60s alternate linear infinite;
+    animation: floatingPizzaSm 60s alternate linear infinite;
 }
 
 

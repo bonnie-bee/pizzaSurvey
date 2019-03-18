@@ -1,3 +1,4 @@
+//require modules for app to run
 require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
@@ -5,10 +6,13 @@ const exphbs = require("express-handlebars");
 const session = require("express-session");
 const passport = require("./services/passportStrategy");
 
+//set up access to databases
 const db = require("./models");
 const app = express();
+//set up port access for local and deployed
 const PORT = process.env.PORT || 8078;
 
+//tell the app to use body parser and set it to json
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static("public"));
