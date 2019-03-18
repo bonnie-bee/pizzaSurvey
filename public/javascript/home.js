@@ -17,12 +17,13 @@ $("#newUserBtn").on("click", function (event) {
         $(".alert").text("Enter username and password");
         $(".alert").css("display", "block");
         return;
+    //if passwords don't match tell the user so they can fix it
     } else if (password1 !== password2) {
         $(".alert").text("Passwords do not match");
         $(".alert").css("display", "block");
         return;
     } else {
-        //otherwise run the signUpUser function
+        //if everything is good, run the signUpUser function
         signUpUser(user, password1);
     }
 });
@@ -78,10 +79,7 @@ function logInUser(username, password) {
         //if no error, send to survey
         if (data === "/survey") {
             window.location.replace(data);
-            //if error, throw error message
-        } else {
-            console.log(data.errors[0].message);
-        }
+        } 
         //catch the error and run the error code
     }).catch(logInErr);
 }
